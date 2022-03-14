@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <button className="toggleForm">
         {/* Show text Add House or Show Rentals based on state */}
-
+        <AddHouse />
       </button>
       {/* Show component based on state */}
 
