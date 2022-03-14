@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 export const AddHouse = () => {
 
   const [houses, sethouses] = useState({ 
+    "name" :"",
+     "ownerName" :"", 
+     " address" :"", " areaCode" :"", " rent" :"", " preferredTenant" :"", "image" :""
 
    });
 
@@ -21,7 +24,7 @@ const onChangeForm = (e) => {
 
     const {id,value} = e.target
     sethouses({  ...houses, [id]:value  })
-    console.log(houses)
+    // console.log(houses)
 
 }
 
@@ -37,30 +40,30 @@ const onChangeForm = (e) => {
 
       <form onSubmit={formSubmit}>
         <label>name</label>
-        <input id='name' placeholder='Enter '  onChange={onChangeForm}  type="text" className="name" value={""} required />
+        <input id='name' placeholder='Enter '  onChange={onChangeForm}  type="text" className="name" required />
         <br />
         <label>ownerName</label>
-        <input id='ownerName' placeholder='Enter '  onChange={onChangeForm}  value={""} type="text" className="ownerName" required />
+        <input id='ownerName' placeholder='Enter '  onChange={onChangeForm}  type="text" className="ownerName" required />
         <br />
         <label>address</label>
-        <input id='address' placeholder='Enter address '  onChange={onChangeForm}  value={""} type="text" className="address" required />
+        <input id='address' placeholder='Enter address '  onChange={onChangeForm}  type="text" className="address" required />
         <br />
         <label>areaCode</label>
-        <input id='areaCode' placeholder='Enter AreaCode'  onChange={onChangeForm}  value={""} type="text" className="areaCode" required />
+        <input id='areaCode' placeholder='Enter AreaCode'  onChange={onChangeForm}  type="text" className="areaCode" required />
         <br />
         <label>rent</label>
-        <input id='rent' placeholder='Enter rent '  onChange={onChangeForm}  value={""} type="text" className="rent" required />
+        <input id='rent' placeholder='Enter rent '  onChange={onChangeForm}  type="text" className="rent" required />
         <br />
         <label>preferredTenant</label>
         <br />
         <label>bachelor</label>
-        <input id=''  onChange={onChangeForm}  checked={""} type="checkbox" className="bachelor" />
+        <input id='bachelar'  onChange={onChangeForm}  checked={""} type="checkbox" className="bachelor" />
         <br />
         <label>married</label>
-        <input id='' placeholder='Enter '  onChange={onChangeForm}  checked={""} type="checkbox" className="married" />
+        <input id='married' placeholder='Enter '  onChange={onChangeForm}  checked={""} type="checkbox" className="married" />
         <br />
         <label>image</label>
-        <input id='' placeholder='Enter '  onChange={onChangeForm}  value={""} type="text" className="image" required />
+        <input id='' placeholder='Enter '  onChange={onChangeForm}  type="text" className="image" required />
         <br />
         <input id='' placeholder='Enter '  onChange={onChangeForm}  className="submitBtn" type="submit" />
       </form>
